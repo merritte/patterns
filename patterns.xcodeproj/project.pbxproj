@@ -14,6 +14,7 @@
 		DEC845171A96F19B006FBC34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC845161A96F19B006FBC34 /* Images.xcassets */; };
 		DEC8451A1A96F19B006FBC34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC845181A96F19B006FBC34 /* LaunchScreen.xib */; };
 		DEC845261A96F19C006FBC34 /* patternsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC845251A96F19C006FBC34 /* patternsTests.swift */; };
+		DEC845301A97F4AB006FBC34 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8452F1A97F4AB006FBC34 /* Pattern.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		DEC8451F1A96F19C006FBC34 /* patternsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = patternsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC845241A96F19C006FBC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC845251A96F19C006FBC34 /* patternsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patternsTests.swift; sourceTree = "<group>"; };
+		DEC8452F1A97F4AB006FBC34 /* Pattern.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				DEC8450C1A96F19B006FBC34 /* AppDelegate.swift */,
 				DEC845111A96F19B006FBC34 /* ViewController.swift */,
+				DEC8452F1A97F4AB006FBC34 /* Pattern.swift */,
 				DEC845131A96F19B006FBC34 /* Main.storyboard */,
 				DEC845161A96F19B006FBC34 /* Images.xcassets */,
 				DEC845181A96F19B006FBC34 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				DEC845121A96F19B006FBC34 /* ViewController.swift in Sources */,
 				DEC845101A96F19B006FBC34 /* patterns.xcdatamodeld in Sources */,
+				DEC845301A97F4AB006FBC34 /* Pattern.swift in Sources */,
 				DEC8450D1A96F19B006FBC34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
