@@ -41,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var pattern = NSEntityDescription.insertNewObjectForEntityForName("Pattern", inManagedObjectContext: context) as Pattern
         
     pattern.name = "Magic Jumper"
+    pattern.frontImage = UIImageJPEGRepresentation(UIImage(named:"dessimg.jpg"), 1)
         context.save(nil)
         
     }
@@ -54,6 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var cell = UITableViewCell()
         var pattern = self.patterns[indexPath.row]
         cell.textLabel!.text = pattern.name
+        cell.imageView!.image = UIImage(data: pattern.frontImage)
         return cell
     }
 
