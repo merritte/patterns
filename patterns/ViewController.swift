@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var patterns : [Pattern] = []
+    var selectedPattern : Pattern? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         var pattern = NSEntityDescription.insertNewObjectForEntityForName("Pattern", inManagedObjectContext: context) as Pattern
         
-    pattern.name = "Magic Jumper"
+    pattern.name = "hood hoodie"
     pattern.frontImage = UIImageJPEGRepresentation(UIImage(named:"dessimg.jpg"), 1)
+    pattern.backImage = UIImageJPEGRepresentation(UIImage(named:"jumperpattern.jpg"), 1)
+
         context.save(nil)
         
     }
@@ -58,7 +61,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.imageView!.image = UIImage(data: pattern.frontImage)
         return cell
     }
-
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedPattern = self.patterns[indexPath.row]
+        self.performSegueWithIdentifier("patternDetailSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var detailViewController = segue.destinationViewController as PatternDetailViewController
+        detailViewController.pattern = self.selectedPattern
+    }
 
 }
 

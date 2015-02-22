@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="73t-Qq-KoV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -19,6 +20,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tx4-cQ-1g2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-529" y="136"/>
+        </scene>
+        <!--Pattern Detail View Controller-->
+        <scene sceneID="IQX-3Z-av5">
+            <objects>
+                <viewController id="msG-dp-ekA" customClass="PatternDetailViewController" customModule="patterns" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Ae-oh-z2i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xkg-fk-29q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nMT-hS-gaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="FRONT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nkw-eG-xhK">
+                                <rect key="frame" x="36" y="89" width="73" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="2u3-Su-Qzf"/>
+                                    <constraint firstAttribute="height" constant="21" id="erb-jp-cz0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dessimg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-4o-Gii">
+                                <rect key="frame" x="10" y="130" width="580" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="805-up-co0"/>
+                                    <constraint firstAttribute="height" constant="190" id="wCy-qR-XBN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-EM-dQj">
+                                <rect key="frame" x="10" y="381" width="580" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="PPR-10-oD9"/>
+                                    <constraint firstAttribute="height" constant="190" id="SkE-Bt-oo4"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNl-pw-b3q">
+                                <rect key="frame" x="10" y="340" width="580" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7S6-E8-cdf"/>
+                                    <constraint firstAttribute="width" constant="47" id="7p6-eM-LGv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="x4C-4o-Gii" secondAttribute="trailing" constant="10" id="6Wc-Ar-p1S"/>
+                            <constraint firstItem="PHA-EM-dQj" firstAttribute="top" secondItem="qNl-pw-b3q" secondAttribute="bottom" constant="20" id="AmV-pF-afc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nkw-eG-xhK" secondAttribute="trailing" constant="20" id="B5g-o3-aNj"/>
+                            <constraint firstItem="x4C-4o-Gii" firstAttribute="leading" secondItem="nMT-hS-gaQ" secondAttribute="leading" constant="10" id="EOJ-Xh-2ew"/>
+                            <constraint firstAttribute="centerX" secondItem="Nkw-eG-xhK" secondAttribute="centerX" id="F33-kV-Ehm"/>
+                            <constraint firstItem="qNl-pw-b3q" firstAttribute="leading" secondItem="nMT-hS-gaQ" secondAttribute="leading" constant="10" id="LIn-Zy-9S9"/>
+                            <constraint firstItem="PHA-EM-dQj" firstAttribute="leading" secondItem="nMT-hS-gaQ" secondAttribute="leading" constant="10" id="QKY-O2-MGR"/>
+                            <constraint firstItem="qNl-pw-b3q" firstAttribute="top" secondItem="x4C-4o-Gii" secondAttribute="bottom" constant="20" id="UCZ-3L-gat"/>
+                            <constraint firstItem="Nkw-eG-xhK" firstAttribute="top" secondItem="4Ae-oh-z2i" secondAttribute="bottom" constant="25" id="Ums-Du-xjD"/>
+                            <constraint firstAttribute="centerX" secondItem="qNl-pw-b3q" secondAttribute="centerX" id="ceo-PN-Egx"/>
+                            <constraint firstAttribute="trailing" secondItem="qNl-pw-b3q" secondAttribute="trailing" constant="10" id="elz-5R-z1k"/>
+                            <constraint firstAttribute="centerX" secondItem="PHA-EM-dQj" secondAttribute="centerX" id="i69-f3-0vb"/>
+                            <constraint firstAttribute="trailing" secondItem="PHA-EM-dQj" secondAttribute="trailing" constant="10" id="lKg-XE-PEd"/>
+                            <constraint firstItem="x4C-4o-Gii" firstAttribute="top" secondItem="Nkw-eG-xhK" secondAttribute="bottom" constant="20" id="oaP-Rr-yJV"/>
+                            <constraint firstAttribute="centerX" secondItem="x4C-4o-Gii" secondAttribute="centerX" id="xh8-gf-JZx"/>
+                            <constraint firstItem="Nkw-eG-xhK" firstAttribute="leading" secondItem="nMT-hS-gaQ" secondAttribute="leadingMargin" constant="20" id="xhb-QU-BA5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backImageView" destination="PHA-EM-dQj" id="MhE-xh-Ace"/>
+                        <outlet property="frontImageView" destination="x4C-4o-Gii" id="O7G-82-WRJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQe-uC-jk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="136"/>
         </scene>
         <!--Patterns-->
         <scene sceneID="tne-QT-ifu">
@@ -50,10 +127,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="TqC-ik-csO" id="zNw-B7-tnb"/>
+                        <segue destination="msG-dp-ekA" kind="show" identifier="patternDetailSegue" id="ZCB-VF-1xl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="dessimg.jpg" width="195" height="258"/>
+    </resources>
 </document>
