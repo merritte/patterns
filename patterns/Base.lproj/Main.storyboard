@@ -43,21 +43,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dessimg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-4o-Gii">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dessimg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="x4C-4o-Gii">
                                 <rect key="frame" x="10" y="130" width="580" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="298" id="805-up-co0"/>
                                     <constraint firstAttribute="height" constant="190" id="wCy-qR-XBN"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-EM-dQj">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PHA-EM-dQj">
                                 <rect key="frame" x="10" y="381" width="580" height="190"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="298" id="PPR-10-oD9"/>
                                     <constraint firstAttribute="height" constant="190" id="SkE-Bt-oo4"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNl-pw-b3q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BACK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNl-pw-b3q">
                                 <rect key="frame" x="10" y="340" width="580" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="7S6-E8-cdf"/>
@@ -91,16 +91,61 @@
                     <connections>
                         <outlet property="backImageView" destination="PHA-EM-dQj" id="MhE-xh-Ace"/>
                         <outlet property="frontImageView" destination="x4C-4o-Gii" id="O7G-82-WRJ"/>
+                        <segue destination="maZ-Qn-SSb" kind="show" identifier="zoomSegue" id="FEV-Nz-aFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WQe-uC-jk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="136"/>
         </scene>
+        <!--Zoom View Controller-->
+        <scene sceneID="reb-qK-w2I">
+            <objects>
+                <viewController id="maZ-Qn-SSb" customClass="ZoomViewController" customModule="patterns" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CJh-og-4xP"/>
+                        <viewControllerLayoutGuide type="bottom" id="k0c-bt-fjy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YeF-Q3-ePW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sfc-k4-RSH">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="jumperpattern.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LyU-Pg-Osg">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="LyU-Pg-Osg" secondAttribute="bottom" id="KGM-xz-E8n"/>
+                                    <constraint firstAttribute="trailing" secondItem="LyU-Pg-Osg" secondAttribute="trailing" id="OmD-Xa-Tig"/>
+                                    <constraint firstItem="LyU-Pg-Osg" firstAttribute="leading" secondItem="sfc-k4-RSH" secondAttribute="leading" id="Roj-mo-eVD"/>
+                                    <constraint firstItem="LyU-Pg-Osg" firstAttribute="top" secondItem="sfc-k4-RSH" secondAttribute="top" id="dXI-mf-KD1"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sfc-k4-RSH" secondAttribute="trailing" id="B07-zf-whU"/>
+                            <constraint firstItem="sfc-k4-RSH" firstAttribute="leading" secondItem="YeF-Q3-ePW" secondAttribute="leading" id="MHg-Ga-gcs"/>
+                            <constraint firstItem="k0c-bt-fjy" firstAttribute="top" secondItem="sfc-k4-RSH" secondAttribute="bottom" id="SrW-jQ-SgD"/>
+                            <constraint firstItem="sfc-k4-RSH" firstAttribute="top" secondItem="YeF-Q3-ePW" secondAttribute="top" id="tvl-jK-Xo3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="LyU-Pg-Osg" id="MIR-9j-XsW"/>
+                        <outlet property="scrollView" destination="sfc-k4-RSH" id="tnT-p1-OQs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THq-Hb-J9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="136"/>
+        </scene>
         <!--Patterns-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="patterns" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PatternsViewController" customModule="patterns" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -136,5 +181,6 @@
     </scenes>
     <resources>
         <image name="dessimg.jpg" width="195" height="258"/>
+        <image name="jumperpattern.jpg" width="246" height="205"/>
     </resources>
 </document>

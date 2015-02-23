@@ -11,6 +11,7 @@ import UIKit
 class PatternDetailViewController: UIViewController {
     
     var pattern : Pattern? = nil
+    var tappedImage : UIImage? = nil
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var backImageView: UIImageView!
     
@@ -23,6 +24,26 @@ class PatternDetailViewController: UIViewController {
         self.frontImageView.image = UIImage(data: self.pattern!.frontImage)
         self.backImageView.image = UIImage(data: self.pattern!.backImage)
 
+        var frontTapRecognizer = UITapGestureRecognizer(target: self, action: "frontTapped")
+        self.frontImageView.addGestureRecognizer(frontTapRecognizer)
+        
+        var backTapRecognizer = UITapGestureRecognizer(target: self, action: "backTapped")
+        self.backImageView.addGestureRecognizer(backTapRecognizer)
+    }
+    
+    func frontTapped() {
+        self.tappedImage = self.frontImageView.image
+        self.performSegueWithIdentifier("zoomSegue", sender: self)
+    }
+    
+    func backTapped() {
+        self.tappedImage = self.backImageView.image
+       self.performSegueWithIdentifier("zoomSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var zoomViewController = segue.destinationViewController as ZoomViewController
+        zoomViewController.image = self.tappedImage!
     }
 
    }
