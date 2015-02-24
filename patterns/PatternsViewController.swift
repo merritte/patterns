@@ -22,8 +22,12 @@ class PatternsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
-        createTestPatterns()
+        //createTestPatterns()
         
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
         
         var request = NSFetchRequest(entityName: "Pattern")
@@ -35,7 +39,6 @@ class PatternsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
 
     }
-    
     func createTestPatterns(){
         var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
         
@@ -68,8 +71,10 @@ class PatternsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "patternDetailSegue" {
         var detailViewController = segue.destinationViewController as PatternDetailViewController
         detailViewController.pattern = self.selectedPattern
+        }
     }
 
 }

@@ -11,6 +11,7 @@
 		DE10C9831A9951EF00D637FD /* PatternDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE10C9821A9951EF00D637FD /* PatternDetailViewController.swift */; };
 		DE10C9851A995DF800D637FD /* jumperpattern.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DE10C9841A995DF800D637FD /* jumperpattern.jpg */; };
 		DE2D31AA1A9A9A23009555AA /* ZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D31A91A9A9A23009555AA /* ZoomViewController.swift */; };
+		DE2D31AC1A9C1C84009555AA /* CreatePatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2D31AB1A9C1C84009555AA /* CreatePatternViewController.swift */; };
 		DEC8450D1A96F19B006FBC34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8450C1A96F19B006FBC34 /* AppDelegate.swift */; };
 		DEC845101A96F19B006FBC34 /* patterns.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEC8450E1A96F19B006FBC34 /* patterns.xcdatamodeld */; };
 		DEC845121A96F19B006FBC34 /* PatternsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC845111A96F19B006FBC34 /* PatternsViewController.swift */; };
@@ -36,6 +37,7 @@
 		DE10C9821A9951EF00D637FD /* PatternDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternDetailViewController.swift; sourceTree = "<group>"; };
 		DE10C9841A995DF800D637FD /* jumperpattern.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jumperpattern.jpg; sourceTree = "<group>"; };
 		DE2D31A91A9A9A23009555AA /* ZoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomViewController.swift; sourceTree = "<group>"; };
+		DE2D31AB1A9C1C84009555AA /* CreatePatternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePatternViewController.swift; sourceTree = "<group>"; };
 		DEC845071A96F19B006FBC34 /* patterns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = patterns.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC8450B1A96F19B006FBC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC8450C1A96F19B006FBC34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				DEC8452F1A97F4AB006FBC34 /* Pattern.swift */,
 				DE10C9821A9951EF00D637FD /* PatternDetailViewController.swift */,
 				DE2D31A91A9A9A23009555AA /* ZoomViewController.swift */,
+				DE2D31AB1A9C1C84009555AA /* CreatePatternViewController.swift */,
 				DEC845131A96F19B006FBC34 /* Main.storyboard */,
 				DEC845161A96F19B006FBC34 /* Images.xcassets */,
 				DEC845181A96F19B006FBC34 /* LaunchScreen.xib */,
@@ -234,6 +237,7 @@
 			files = (
 				DEC845121A96F19B006FBC34 /* PatternsViewController.swift in Sources */,
 				DE2D31AA1A9A9A23009555AA /* ZoomViewController.swift in Sources */,
+				DE2D31AC1A9C1C84009555AA /* CreatePatternViewController.swift in Sources */,
 				DEC845101A96F19B006FBC34 /* patterns.xcdatamodeld in Sources */,
 				DE10C9831A9951EF00D637FD /* PatternDetailViewController.swift in Sources */,
 				DEC845301A97F4AB006FBC34 /* Pattern.swift in Sources */,
